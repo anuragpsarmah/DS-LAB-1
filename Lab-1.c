@@ -7,7 +7,7 @@ struct User
     int BMI;
 };
 
-void insertion(struct User arr[2][2], int rows, int cols)
+void insertion(struct User (*arr)[2], int rows, int cols)
 {
     for (int i = 0; i < rows; i++)
     {
@@ -21,7 +21,7 @@ void insertion(struct User arr[2][2], int rows, int cols)
     }
 }
 
-void modifyArray(struct User arr[4][2], int rows, int cols)
+void modifyArray(struct User (*arr)[2], int rows, int cols)
 {
     int row, col;
 
@@ -49,7 +49,7 @@ void modifyArray(struct User arr[4][2], int rows, int cols)
     scanf("%d", &arr[row][col].BMI);
 }
 
-void displayArray(struct User arr[4][2], int rows, int cols)
+void displayArray(struct User (*arr)[2], int rows, int cols)
 {
     for (int i = 0; i < rows; i++)
     {
@@ -68,7 +68,7 @@ void displayArray(struct User arr[4][2], int rows, int cols)
     }
 }
 
-void mergeArrays(struct User array1[2][2], struct User array2[2][2], struct User array3[4][2])
+void mergeArrays(struct User (*array1)[2], struct User (*array2)[2], struct User (*array3)[2])
 {
     int k = 0;
 
@@ -83,7 +83,7 @@ void mergeArrays(struct User array1[2][2], struct User array2[2][2], struct User
     }
 }
 
-void deleteElement(struct User arr[4][2], int rows, int cols)
+void deleteElement(struct User (*arr)[2], int rows, int cols)
 {
     int row, col;
 
@@ -108,7 +108,7 @@ void deleteElement(struct User arr[4][2], int rows, int cols)
     arr[row][col].BMI = -1;
 }
 
-void addArrays(struct User array1[2][2], struct User array2[2][2], struct User resultArray[2][2])
+void addArrays(struct User (*array1)[2], struct User (*array2)[2], struct User (*resultArray)[2])
 {
     for (int i = 0; i < 2; i++)
     {
@@ -120,7 +120,7 @@ void addArrays(struct User array1[2][2], struct User array2[2][2], struct User r
     }
 }
 
-void subtractArrays(struct User array1[2][2], struct User array2[2][2], struct User resultArray[2][2])
+void subtractArrays(struct User (*array1)[2], struct User (*array2)[2], struct User (*resultArray)[2])
 {
     for (int i = 0; i < 2; i++)
     {
@@ -132,7 +132,7 @@ void subtractArrays(struct User array1[2][2], struct User array2[2][2], struct U
     }
 }
 
-void display2x2Array(struct User arr[2][2])
+void display2x2Array(struct User (*arr)[2])
 {
     for (int i = 0; i < 2; i++)
     {
@@ -144,7 +144,7 @@ void display2x2Array(struct User arr[2][2])
     }
 }
 
-void linearSearch(struct User arr[4][2], int rows, int cols, const char *searchName)
+void linearSearch(struct User (*arr)[2], int rows, int cols, const char *searchName)
 {
     int row = -1, col = -1;
 
